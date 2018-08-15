@@ -7,10 +7,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "jest-matchers": "^20.0.3",
     "mocha": "^5.2.0",
-    "prettier": "^1.13.7",
-    "chai": "4.1.2"
+    "chai": "4.1.2",
+    "prettier": "^1.13.7"
   },
   "prettier": {
     "trailingComma": "es5"
