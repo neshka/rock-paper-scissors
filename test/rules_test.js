@@ -18,6 +18,11 @@ describe("rules of the game", function() {
         expect(winner).to.equal('paper')
     });
 
+    it("rock vs scissors", function() {
+        var winner = rules.compare('rock', 'scissors');
+        expect(winner).to.equal('rock')
+    });
+
   });
 
 });

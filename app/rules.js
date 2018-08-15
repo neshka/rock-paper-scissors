@@ -14,6 +14,10 @@ function compare (hand1, hand2) {
     if (hand1 === 'paper' && hand2 === 'scissors') {
         return 'scissors';
     }
+
+    if (hand1 === 'rock' && hand2 === 'scissors') {
+        return 'rock';
+    }
 }
 
 
