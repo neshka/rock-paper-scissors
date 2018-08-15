@@ -1,0 +1,17 @@
+{
+  "name": "rock-paper-scissors",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha test/stats.test.js",
+    "prettier": "prettier --write *.js lib/**/*.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest-matchers": "^20.0.3",
+    "mocha": "^5.2.0",
+    "prettier": "^1.13.7"
+  },
+  "prettier": {
+    "trailingComma": "es5"
+  }
+}
