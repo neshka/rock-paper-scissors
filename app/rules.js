@@ -1,6 +1,8 @@
 var paper = 'paper';
 var rock = 'rock';
 var scissors = 'scissors';
+var lizard = 'lizard';
+var spock = 'spock';
 
 function compare(hand1, hand2) {
     if (hand2 === paper) {
