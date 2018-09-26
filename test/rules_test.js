@@ -35,15 +35,15 @@ describe("rules of the game", function() {
         expect(winner).to.equal('rock')
     });
 
-    // it("rock vs lizard", function() {
-    //     var winner = rules.compare('rock', 'lizard');
-    //     expect(winner).to.equal('rock')
-    // });
+    it("rock vs lizard", function() {
+        var winner = rules.compare('rock', 'lizard');
+        expect(winner).to.equal('rock')
+    });
 
-    // it("rock vs spock", function() {
-    //     var winner = rules.compare('rock', 'spock');
-    //     expect(winner).to.equal('spock')
-    // });
+    it("rock vs spock", function() {
+        var winner = rules.compare('rock', 'spock');
+        expect(winner).to.equal('spock')
+    });
 
     it("scissors vs rock", function() {
         var winner = rules.compare('scissors', 'rock');
@@ -55,10 +55,10 @@ describe("rules of the game", function() {
         expect(winner).to.equal('scissors')
     });
 
-    // it("scissors vs lizard", function() {
-    //     var winner = rules.compare('scissors', 'lizard');
-    //     expect(winner).to.equal('scissors')
-    // });
+    it("scissors vs lizard", function() {
+        var winner = rules.compare('scissors', 'lizard');
+        expect(winner).to.equal('scissors')
+    });
 
     // it("scissors vs spock", function() {
     //     var winner = rules.compare('scissors', 'spock');

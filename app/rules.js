@@ -36,6 +36,18 @@ function compare(hand1, hand2) {
     if (hand1 === rock && hand2 === scissors) {
         return rock;
     }
+
+    if (hand1 === rock && hand2 === lizard) {
+        return rock;
+    }
+
+    if (hand1 === rock && hand2 === spock) {
+        return spock;
+    }
+
+    
+
+
 }
 
 module.exports.compare = compare;
