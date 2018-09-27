@@ -24,7 +24,7 @@ function compare(hand1, hand2) {
     }
 
     if (hand1 === paper && hand2 === spock) {
-        return spock;
+        return paper;
     }
 
     if (hand2 === rock) {
@@ -45,8 +45,29 @@ function compare(hand1, hand2) {
         return spock;
     }
 
-    
+    if (hand2 === scissors) {
+        //make sure scissors are always in hand1
+        hand2 = hand1;
+        hand1 = scissors;
+    }
 
+    if (hand1 === scissors && hand2 === lizard) {
+        return scissors;
+    }
+
+    if (hand1 === scissors && hand2 === spock) {
+        return spock;
+    }
+
+    if (hand2 === spock) {
+        //make sure spock is always in hand1
+        hand2 = hand1;
+        hand1 = spock;
+    }
+
+    if (hand1 === spock && hand2 === lizard) {
+        return lizard;
+    }
 
 }
 
