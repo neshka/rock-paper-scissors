@@ -25,6 +25,11 @@ describe("rules of the game", function() {
         expect(winner).to.equal('paper')
     });
 
+    it("paper vs paper", function() {
+        var winner = rules.compare('paper', 'paper');
+            expect(winner).to.equal('draw')
+    });
+
     it("rock vs paper", function() {
         var winner = rules.compare('rock', 'paper');
         expect(winner).to.equal('paper')
@@ -43,6 +48,11 @@ describe("rules of the game", function() {
     it("rock vs spock", function() {
         var winner = rules.compare('rock', 'spock');
         expect(winner).to.equal('spock')
+    });
+
+    it("rock vs rock", function() {
+        var winner = rules.compare('rock', 'rock');
+        expect(winner).to.equal('draw')
     });
 
     it("scissors vs rock", function() {

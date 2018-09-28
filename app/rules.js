@@ -3,8 +3,13 @@ var rock = 'rock';
 var scissors = 'scissors';
 var lizard = 'lizard';
 var spock = 'spock';
+var draw = 'draw' 
 
 function compare(hand1, hand2) {
+    if (hand1 === paper && hand2 === paper) {
+        return draw;
+    }
+    
     if (hand2 === paper) {
         //make sure paper is always in hand1
         hand2 = hand1;
@@ -25,6 +30,10 @@ function compare(hand1, hand2) {
 
     if (hand1 === paper && hand2 === spock) {
         return paper;
+    }
+
+    if (hand1 === rock && hand2 === rock) {
+        return draw;
     }
 
     if (hand2 === rock) {
