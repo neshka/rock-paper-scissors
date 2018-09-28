@@ -54,6 +54,10 @@ function compare(hand1, hand2) {
         return spock;
     }
 
+    if (hand1 === scissors && hand2 === scissors) {
+        return draw;
+    }
+
     if (hand2 === scissors) {
         //make sure scissors are always in hand1
         hand2 = hand1;

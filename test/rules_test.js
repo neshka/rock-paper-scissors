@@ -75,6 +75,11 @@ describe("rules of the game", function() {
         expect(winner).to.equal('spock')
     });
 
+    it("scissors vs scissors", function() {
+        var winner = rules.compare('scissors', 'scissors');
+        expect(winner).to.equal('draw')
+    });
+
     it("spock vs scissors", function() {
         var winner = rules.compare('spock', 'scissors');
         expect(winner).to.equal('spock')
