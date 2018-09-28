@@ -72,6 +72,10 @@ function compare(hand1, hand2) {
         return spock;
     }
 
+    if (hand1 === spock && hand2 === spock) {
+        return draw;
+    }
+
     if (hand2 === spock) {
         //make sure spock is always in hand1
         hand2 = hand1;
@@ -80,6 +84,10 @@ function compare(hand1, hand2) {
 
     if (hand1 === spock && hand2 === lizard) {
         return lizard;
+    }
+
+    if (hand1 === lizard && hand2 === lizard) {
+        return draw;
     }
 
 }

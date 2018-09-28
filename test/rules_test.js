@@ -100,6 +100,11 @@ describe("rules of the game", function() {
         expect(winner).to.equal('lizard')
     });
 
+    it("spock vs spock", function() {
+        var winner = rules.compare('spock', 'spock');
+        expect(winner).to.equal('draw')
+    });
+
     it("lizard vs scissors", function() {
         var winner = rules.compare('lizard', 'scissors');
         expect(winner).to.equal('scissors')
@@ -118,6 +123,11 @@ describe("rules of the game", function() {
     it("lizard vs spock", function() {
         var winner = rules.compare('lizard', 'spock');
         expect(winner).to.equal('lizard')
+    });
+
+    it("lizard vs lizard", function() {
+        var winner = rules.compare('lizard', 'lizard');
+        expect(winner).to.equal('draw')
     });
 
   });
