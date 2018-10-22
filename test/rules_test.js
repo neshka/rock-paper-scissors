@@ -2,14 +2,14 @@ var expect = require("chai").expect;
 var rules = require("../app/rules");
 
 describe("rules of the game", function() {
-  
+
   describe("there is a winner", function() {
-    
+
     it("paper vs rock", function() {
         var winner = rules.compare('paper', 'rock');
         expect(winner).to.equal('paper')
     });
-    
+
     it("paper vs scissors", function() {
         var winner = rules.compare('paper', 'scissors');
         expect(winner).to.equal('scissors')
@@ -21,13 +21,8 @@ describe("rules of the game", function() {
     });
 
     it("paper vs spock", function() {
-    var winner = rules.compare('paper', 'spock');
+        var winner = rules.compare('paper', 'spock');
         expect(winner).to.equal('paper')
-    });
-
-    it("paper vs paper", function() {
-        var winner = rules.compare('paper', 'paper');
-            expect(winner).to.equal('draw')
     });
 
     it("rock vs paper", function() {
@@ -50,11 +45,6 @@ describe("rules of the game", function() {
         expect(winner).to.equal('spock')
     });
 
-    it("rock vs rock", function() {
-        var winner = rules.compare('rock', 'rock');
-        expect(winner).to.equal('draw')
-    });
-
     it("scissors vs rock", function() {
         var winner = rules.compare('scissors', 'rock');
         expect(winner).to.equal('rock')
@@ -73,11 +63,6 @@ describe("rules of the game", function() {
     it("scissors vs spock", function() {
         var winner = rules.compare('scissors', 'spock');
         expect(winner).to.equal('spock')
-    });
-
-    it("scissors vs scissors", function() {
-        var winner = rules.compare('scissors', 'scissors');
-        expect(winner).to.equal('draw')
     });
 
     it("spock vs scissors", function() {
@@ -100,11 +85,6 @@ describe("rules of the game", function() {
         expect(winner).to.equal('lizard')
     });
 
-    it("spock vs spock", function() {
-        var winner = rules.compare('spock', 'spock');
-        expect(winner).to.equal('draw')
-    });
-
     it("lizard vs scissors", function() {
         var winner = rules.compare('lizard', 'scissors');
         expect(winner).to.equal('scissors')
@@ -123,6 +103,30 @@ describe("rules of the game", function() {
     it("lizard vs spock", function() {
         var winner = rules.compare('lizard', 'spock');
         expect(winner).to.equal('lizard')
+    });
+
+  });
+
+  describe("there is a draw", function() {
+
+    it("paper vs paper", function() {
+        var winner = rules.compare('paper', 'paper');
+        expect(winner).to.equal('draw')
+    });
+
+    it("rock vs rock", function() {
+        var winner = rules.compare('rock', 'rock');
+        expect(winner).to.equal('draw')
+    });
+
+    it("scissors vs scissors", function() {
+        var winner = rules.compare('scissors', 'scissors');
+        expect(winner).to.equal('draw')
+    });
+
+    it("spock vs spock", function() {
+        var winner = rules.compare('spock', 'spock');
+        expect(winner).to.equal('draw')
     });
 
     it("lizard vs lizard", function() {
