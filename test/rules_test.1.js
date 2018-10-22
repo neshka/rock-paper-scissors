@@ -115,29 +115,13 @@ describe("rules of the game", function() {
 
   describe("there is a draw", function() {
 
-    it("paper vs paper", function() {
-        var winner = rules.compare('paper', 'paper');
-        expect(winner).to.equal('draw')
-    });
+    ['paper', 'rock', 'scissors', 'spock', 'lizard'].forEach(function(hand) {
 
-    it("rock vs rock", function() {
-        var winner = rules.compare('rock', 'rock');
-        expect(winner).to.equal('draw')
-    });
+        it(hand + " vs " + hand, function() {
+            var winner = rules.compare(hand, hand);
+            expect(winner).to.equal('draw')
+        });
 
-    it("scissors vs scissors", function() {
-        var winner = rules.compare('scissors', 'scissors');
-        expect(winner).to.equal('draw')
-    });
-
-    it("spock vs spock", function() {
-        var winner = rules.compare('spock', 'spock');
-        expect(winner).to.equal('draw')
-    });
-
-    it("lizard vs lizard", function() {
-        var winner = rules.compare('lizard', 'lizard');
-        expect(winner).to.equal('draw')
     });
 
   });
